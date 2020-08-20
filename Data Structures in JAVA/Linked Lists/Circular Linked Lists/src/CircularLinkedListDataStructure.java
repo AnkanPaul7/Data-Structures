@@ -1,11 +1,24 @@
 /*
-   This program shows how to create and display a Singly Linked List in JAVA
+   This program shows how to create and display a Circular Linked List in JAVA
    Author - Rajarshi Sengupta
    Github - https://github.com/rajarshisg
    Date - 20/08/2020 (dd/mm/yyyy)
+   
+   
+   Node class definition :
+   public class Node<T> {
+   T data;
+   Node next;
+   Node(T data){
+	   this.data=data;
+	   this.next=null;
+   }
+   
+}
+
 */
 import java.util.Scanner;
-public class LinkedListDataStructure {
+public class CircularLinkedListDataStructure {
    public static void main(String args[])
    {
 	   Scanner sc=new Scanner(System.in);
@@ -27,11 +40,13 @@ public class LinkedListDataStructure {
 			   n=n.next;
 		   }
 	   }
+	   n.next=head;
 	   System.out.println("The Linked List is :");
-	   while(head!=null)
+	   Node curr=head;
+	   do
 	   {
-		   System.out.print(head.data+" ");
-		   head=head.next;
-	   }
+		   System.out.print(curr.data+" ");
+		   curr=curr.next;
+	   }while(curr!=head);
    }
 }

@@ -1,11 +1,10 @@
-import java.util.Scanner;
-
 /*
    This program deletes a Singly Linked List in JAVA
    Author - Rajarshi Sengupta
    Github - https://github.com/rajarshisg
    Date - 20/08/2020 (dd/mm/yyyy)
 */
+import java.util.Scanner;
 public class SinglyLinkedListDelete {
 	void traverse(Node<Integer> head) {
     	while(head!=null)
